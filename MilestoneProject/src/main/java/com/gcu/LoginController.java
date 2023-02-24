@@ -29,6 +29,14 @@ public class LoginController
 		return "login";
 	}
 	
+	@GetMapping("register/")
+	public String displayRegister(Model model)
+	{
+		model.addAttribute("title", "Login Form");
+		model.addAttribute("loginModel", new LoginModel());
+		return "register";
+	}
+	
 	@PostMapping("/doLogin")
 	public String doLogin(@Valid LoginModel loginModel, BindingResult bindingResult, Model model)
 	{
