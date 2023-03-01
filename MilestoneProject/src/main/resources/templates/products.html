@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate.html">
+<head>
+<style>
+	* {
+		font-family: Arial;
+	}
+	h2 {
+		color:blue;
+	}
+	p {
+		font-style: italic;
+	}
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding:2px;
+	}	
+</style>
+</head>
+	<body layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+			<table>
+				<tr>
+					<th>Product Name</th>
+					<th>Move/Show</th>
+					<th>Rarity</th>
+					<th>Date of Production</th>
+					<th>Price</th>
+				</tr>
+				<tr th:each="product : ${products}">
+					<td th:text="${product.nameOfObject}"></td>
+					<td th:text="${product.showName}"></td>
+					<td th:text="${product.rarityValue}"></td>
+					<td th:text="${product.dateOfProduction}"></td>
+					<td th:text="${product.price}"></td>
+				</tr>
+				
+				
+			</table>
+			<br>
+			<form action="#" th:action="@{showAddNewProduct}" method="get">
+			<button type="submit">Add Product</button>
+			<br>
+	</body>
+</html>

@@ -83,12 +83,13 @@
 					<div class="fieldError">
 						<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
 					</div>
+					
 					<button type="submit">Login</button>
 				</div>
 					
 				<div class="container" style="background-color: #ddd">
 					<button type="button" class="cancelbtn">Cancel</button>
-					<span class="psw">Forgot <a href="#">password?</a></span>
+					<span class="psw">Need an account? Register <a href="register/">here</a></span>
 				</div>
 				
 				<div th:if="${#fields.hasErrors('*')}">List of Errors</div>

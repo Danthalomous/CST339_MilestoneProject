@@ -72,24 +72,23 @@
 				</div>
 				
 				<div class="container">
-					<label for="uname"><b>Username</b></label>
+					<label for="uname"><b>Enter New Username</b></label>
 					<input type="text" th:field="*{username}" placeholder="Enter username" name="uname" required>
 					<div class="fieldError">
 						<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name Error</p>
 					</div>
 					
-					<label for="psw"><b>Password</b></label>
+					<label for="psw"><b>Enter New Password</b></label>
 					<input type="password" th:field="*{password}" name="psw" required>
 					<div class="fieldError">
 						<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
 					</div>
-					
-					<button type="submit">Login</button>
+					<button type="button">Register</button>
 				</div>
 					
 				<div class="container" style="background-color: #ddd">
 					<button type="button" class="cancelbtn">Cancel</button>
-					<span class="psw">Need an account? Register <a href="register/">here</a></span>
+					<span class="psw">Login <a th:href="@{/login/}">here</a></span>
 				</div>
 				
 				<div th:if="${#fields.hasErrors('*')}">List of Errors</div>

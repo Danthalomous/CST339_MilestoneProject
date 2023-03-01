@@ -66,37 +66,31 @@
 	</head>
 		<body>
 		<div layout:fragment="content">
-			<form action="#" th:action="@{doLogin}" th:object="${loginModel}" method="post">
-				<div class="imgcontainer">
-					<img th:src="@{/img/login_avatar.png}" alt="Avatar" class="avatar"/>
-				</div>
-				
+			<form class="form" action="#" th:action="@{addProduct}" th:object="${product}" method="post">
 				<div class="container">
-					<label for="uname"><b>Username</b></label>
-					<input type="text" th:field="*{username}" placeholder="Enter username" name="uname" required>
-					<div class="fieldError">
-						<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">User Name Error</p>
-					</div>
+					<label for="id"><b>Item ID</b></label>
+					<input type="text" field="*{id}" placeholder="Enter item name" name="id" required>
 					
-					<label for="psw"><b>Password</b></label>
-					<input type="password" th:field="*{password}" name="psw" required>
-					<div class="fieldError">
-						<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
-					</div>
+					<label for="nameOfObject"><b>Item Name</b></label>
+					<input type="text" field="*{nameOfObject}" placeholder="Enter item name" name="nameOfObject" required>
 					
-					<button type="submit">Login</button>
-				</div>
+					<label for="showName"><b>Show Name</b></label>
+					<input type="text" field="*{showName}" name="showName" required>
 					
-				<div class="container" style="background-color: #ddd">
-					<button type="button" class="cancelbtn">Cancel</button>
-					<span class="psw">Need an account? Register <a href="register/">here</a></span>
+					<label for="rarityValue"><b>Rarity</b></label>
+					<input type="text" field="*{rarityValue}" name="rarityValue" required>
+					
+					<label for="dateOfProduction"><b>Date of Production</b></label>
+					<input type="text" field="*{dateOfProduction}" name="dateOfProduction" required>
+
+					<label for="photoFileName"><b>Photo File Name</b></label>
+					<input type="text" field="*{photoFileName}" name="photoFileName" required>
+					
+					<label for="price"><b>Price</b></label>
+					<input type="text" field="*{price}" name="price" required>
+					
+					<button type="submit">Create New Product</button>
 				</div>
-				
-				<div th:if="${#fields.hasErrors('*')}">List of Errors</div>
-				<div th:each="err : ${#fields.errors('*')}">
-					<span th:text="${err}" class="fieldError"></span>
-				</div>
-				
 			</form>
 		</div>
 		</body>
