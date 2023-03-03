@@ -2,6 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate.html">
 	<head>
 		<style>
+			h1{
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+			}
 			.personSections{
 				display: flex;
 				border: 2px solid black;
@@ -9,10 +12,19 @@
 				border-radius: 25px;
 				padding:8px;
 			}
+			.personDescriptions{
+				width: 90%;
+				margin: 10px 10px 0px;
+				font-size: 40px;
+			}
+			.card{
+				border:1px solid black;
+			}
 		</style>
 	</head>
 	<body>
 		<div layout:fragment="content">
+			<h1>Welcome to our website</h1>
 			<div class="personSections">
 				<div class="card" style="width: 14rem;">
 					<img th:src="@{/img/cheems.jpg}" class="card-img-top" alt="Picture for Cody">
@@ -20,7 +32,7 @@
 					  <h4 class="card-text">Cody Armstrong</h4>
 					</div>
 				</div>
-				<p>
+				<p class="personDescriptions">
 					Welcome to our website for CST-339. I'm Cody Armstrong,
 					and I am a junior Software Development student
 					here at GCU. If you haven't yet, please go 
@@ -35,7 +47,7 @@
 					  <h4 class="card-text">Daniel Thompson</h4>
 					</div>
 				</div>
-				<p>
+				<p class="personDescriptions">
 					Welcome to our website for CST-339. I'm Daniel Thompson,
 					and I am a junior Software Development student
 					here at GCU. If you haven't yet, please go 
