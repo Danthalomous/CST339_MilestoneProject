@@ -13,9 +13,8 @@
 			.footer-section {
 				border: 2px black solid;
 			}
-			nav{
-				position: fixed;
-				top:0;
+			.content-section{
+				margin-top: 60px;
 			}
 		</style>
 	</head>
@@ -23,10 +22,10 @@
 	<body>
 		<div align="center">
 			<!-- This dive will be replaced by the header fragment from commonHeader.html  -->
-			<div th:replace="layouts/commonHeader.html :: header">My Header</div>
+			<div class="header-section" th:replace="layouts/commonHeader.html :: header">My Header</div>
 			
 			<!-- This dive will be replaced by a page if there exists a <div class="content"> -->
-			<section layout:fragment="content">
+			<section class="content-section" layout:fragment="content">
 				<p>My Body Content</p>
 			</section>
 			
