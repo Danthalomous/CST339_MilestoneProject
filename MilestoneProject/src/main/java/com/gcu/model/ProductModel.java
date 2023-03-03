@@ -3,12 +3,13 @@ package com.gcu.model;
 public class ProductModel
 {
 	// Variable Initilization
-	String nameOfObject = "";
-	String showName = "";
-	int rarityValue = 1; // Between 1-10
-	String dateOfProduction = ""; // TODO: Change this to correct data type for database in the future
-	String photoFileName = ""; // JPEG
-	double price = 0.0;
+	int id;
+	String nameOfObject;
+	String showName;
+	int rarityValue; // Between 1-10
+	String dateOfProduction; // TODO: Change this to correct data type for database in the future
+	String photoFileName; // JPEG
+	double price;
 	
 	/**
 	 * @param nameOfObject
@@ -18,16 +19,27 @@ public class ProductModel
 	 * @param photoFileName
 	 * @param price
 	 */
-	public ProductModel(String nameOfObject, String showName, int rarityValue, String dateOfProduction,
+	public ProductModel(int id, String nameOfObject, String showName, int rarityValue, String dateOfProduction,
 			String photoFileName, double price) 
 	{
 		super();
+		this.id = id;
 		this.nameOfObject = nameOfObject;
 		this.showName = showName;
 		this.rarityValue = rarityValue;
 		this.dateOfProduction = dateOfProduction;
 		this.photoFileName = photoFileName;
 		this.price = price;
+	}
+	
+	public ProductModel()
+	{
+	
+	}
+
+	public int getId()
+	{
+		return id;
 	}
 	
 	/**
@@ -122,6 +134,11 @@ public class ProductModel
 	public void setPrice(double price)
 	{
 		this.price = price;
+	}
+	
+	public void setId(int id)
+	{
+		this.id = id;
 	}
 	
 	

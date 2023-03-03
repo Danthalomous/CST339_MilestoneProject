@@ -28,19 +28,13 @@
 					<th>Date of Production</th>
 					<th>Price</th>
 				</tr>
-				<tr th:each="product : ${products}">
+				<tr th:each="product : ${searchProducts}">
 					<td th:text="${product.nameOfObject}"></td>
 					<td th:text="${product.showName}"></td>
 					<td th:text="${product.rarityValue}"></td>
 					<td th:text="${product.dateOfProduction}"></td>
 					<td th:text="${product.price}"></td>
-				</tr>
-				
-				
+				</tr>		
 			</table>
-			<br>
-			<form action="#" th:action="@{showAddNewProduct}" method="get">
-			<button type="submit">Add Product</button>
-			<br>
 	</body>
 </html>

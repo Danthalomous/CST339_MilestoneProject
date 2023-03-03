@@ -35,6 +35,12 @@
 					<td th:text="${product.dateOfProduction}"></td>
 					<td th:text="${product.price}"></td>
 				</tr>
+				
+				
 			</table>
+			<br>
+			<form action="#" th:action="@{showAddNewProduct}" method="get">
+			<button type="submit">Add Product</button>
+			<br>
 	</body>
 </html>
