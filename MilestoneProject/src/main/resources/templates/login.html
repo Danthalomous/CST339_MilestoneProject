@@ -18,7 +18,7 @@
 			border-radius: 4px;
 		}
 		
-		button {
+		#pageButtons {
 			background-color: #04AA6D;
 			color: white;
 			padding: 14px 20px;
@@ -83,8 +83,7 @@
 					<div class="fieldError">
 						<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</p>
 					</div>
-					
-					<button type="submit">Login</button>
+					<button id ="pageButtons" type="submit">Login</button>
 				</div>
 					
 				<div class="container" style="background-color: #ddd">
