@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 //import com.gcu.business.OrdersBusinessService;
 import com.gcu.business.SecurityServiceInterface;
-import com.gcu.business.FiveValidLogins;
+import com.gcu.business.LoginService;
 import com.gcu.business.ProductBusinessService;
 import com.gcu.business.ProductBusinessServiceInterface;
 
@@ -21,7 +21,7 @@ public class SpringConfig
 	@Bean(name="securityService")
 	SecurityServiceInterface getSecurityService()
 	{	
-		return new FiveValidLogins();
+		return new LoginService();
 	}
 }
 
