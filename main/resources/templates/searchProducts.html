@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate.html">
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<style>
+	* {
+		font-family: Arial;
+	}
+	h2 {
+		color:blue;
+	}
+	p {
+		font-style: italic;
+	}
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding:2px;
+	}	
+</style>
+</head>
+	<body layout:fragment="content">
+		<h1 th:text="${title}"></h1>
+			<table class="table table-striped table-hover">
+				<thead class="thead-dark">
+					<tr>
+						<th>Product Name</th>
+						<th>Move/Show</th>
+						<th>Rarity</th>
+						<th>Date of Production</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="product : ${searchProducts}">
+						<td th:text="${product.nameOfObject}"></td>
+						<td th:text="${product.showName}"></td>
+						<td th:text="${product.rarityValue}"></td>
+						<td th:text="${product.dateOfProduction}"></td>
+						<td th:text="${product.price}"></td>
+					</tr>	
+				</tbody>	
+			</table>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate.html">
+	
+	<head>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;}
+		form {
+			border: 3px solid #ccc;
+		}
+		
+		input[type=text], input[type=password] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 4px;
+		}
+		
+		#pageButton {
+			background-color: #04AA6D;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			border-radius: 3px;
+		}
+		
+		button:hover {
+			opacity: 0.8;
+		}
+		
+		.cancelbtn {
+			width:auto;
+			padding: 10px 18px;
+			background-color: #f44336;
+		}
+		
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+		
+		img.avatar {
+			width: 40%;
+			max-width: 300px;
+			border-radius: 50%;
+		}
+		
+		.container {
+			padding: 16px;
+		}
+		
+		span.psw {
+			float: right;
+			padding-top: 16px;
+		}
+		
+		.fieldError {
+			color: red;
+		}
+	</style>
+	</head>
+		<body>
+		<div layout:fragment="content">
+			<form class="form" action="#" th:action="@{addProduct}" th:object="${product}" method="post">
+				<div class="container">
+					<label for="id"><b>Item ID</b></label>
+					<input type="text" field="*{id}" placeholder="Enter item name" name="id" required>
+					
+					<label for="nameOfObject"><b>Item Name</b></label>
+					<input type="text" field="*{nameOfObject}" placeholder="Enter item name" name="nameOfObject" required>
+					
+					<label for="showName"><b>Show Name</b></label>
+					<input type="text" field="*{showName}" name="showName" required>
+					
+					<label for="rarityValue"><b>Rarity</b></label>
+					<input type="text" field="*{rarityValue}" name="rarityValue" required>
+					
+					<label for="dateOfProduction"><b>Date of Production</b></label>
+					<input type="text" field="*{dateOfProduction}" name="dateOfProduction" required>
+
+					<label for="photoFileName"><b>Photo File Name</b></label>
+					<input type="text" field="*{photoFileName}" name="photoFileName" required>
+					
+					<label for="price"><b>Price</b></label>
+					<input type="text" field="*{price}" name="price" required>
+					
+					<button id="pageButton" type="submit">Create New Product</button>
+				</div>
+			</form>
+		</div>
+		</body>
+</html>
