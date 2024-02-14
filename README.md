@@ -1,4 +1,4 @@
-# Spring Boot CRUD Application
+![Spring oot CRUDApplication](Springboot_CRUD_Application.png)
 
 This repository contains a simple Spring Boot CRUD (Create, Read, Update, Delete) application.
 
