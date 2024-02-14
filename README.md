@@ -1,4 +1,4 @@
-![Spring oot CRUDApplication](Springboot_CRUD_Application.png)
+![Springboot CRUDApplication](Springboot_CRUD_Application.png)
 
 This repository contains a simple Spring Boot CRUD (Create, Read, Update, Delete) application.
 
@@ -71,4 +71,8 @@ Once the application is up and running, you can interact with it via its RESTful
 - **GET /search/{searchTerm}:** Search Through the Products
 
 ## Screenshots
+- Here are the results of the /products GET request:
+  ![Products Page](Untitled1.png)
 
+- Here is what the /addProduct form page looks like:
+  ![New Product Page](Untitled.png)
