@@ -30,7 +30,7 @@ This repository contains a simple Spring Boot CRUD (Create, Read, Update, Delete
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/danthalomous/CST339_MilestoneProject
+    git clone https://github.com/danthalomous/CST339_MilestoneProject.git
     ```
 
 2. **Navigate to the project directory:**
