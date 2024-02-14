@@ -9,7 +9,7 @@ This repository contains a simple Spring Boot CRUD (Create, Read, Update, Delete
 - [Setup](#setup)
 - [Usage](#usage)
 - [Endpoints](#endpoints)
-- [License](#license)
+- [Screenshots](#screenshots)
 
 ## Features
 
@@ -53,7 +53,7 @@ This repository contains a simple Spring Boot CRUD (Create, Read, Update, Delete
 5. **Run the application:**
 
     ```bash
-    java -jar target/spring-boot-crud-1.0.jar
+    java -jar target/CST339_MilestoneProject-1.0.jar
     ```
 
 ## Usage
@@ -62,10 +62,13 @@ Once the application is up and running, you can interact with it via its RESTful
 
 ## Endpoints
 
-- **GET /api/entities:** Retrieve all entities.
-- **GET /api/entities/{id}:** Retrieve an entity by ID.
-- **POST /api/entities:** Create a new entity.
-- **PUT /api/entities/{id}:** Update an existing entity.
-- **DELETE /api/entities/{id}:** Delete an entity by ID.
+- **GET /products:** Retrieve all entities.
+- **GET /showAddNewProduct:** Shows New Products
+- **POST /addProduct:** Create a new entity.
+- **GET /delete/{id}:** Delete an existing entity by ID.
+- **GET /update/{id}:** Update an entity by ID.
+- **POST /processUpdate:** Process the Update
+- **GET /search/{searchTerm}:** Search Through the Products
 
-Replace `entities` with the actual resource name in your application.
+## Screenshots
+
